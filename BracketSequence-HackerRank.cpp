@@ -33,8 +33,8 @@ int main()
 
 	//Getting Starting index of actual correct sequence
 	start = findStart(arr, 0, len);
-	cout << len << endl;
-	cout << arr << " tbr: " << endl;
+	//cout << len << endl;
+	//cout << arr << " tbr: " << endl;
 	//copying correct sequence to another array
 	for (int i = 0, j = start; i < len; i++)
 	{
@@ -42,7 +42,7 @@ int main()
 		if ((++j) == len)
 			j = 0;
 
-		cout << " array: " << finalArr << "i=" << i << " j=" << j << endl;
+		//	cout << " array: " << finalArr << "i=" << i << " j=" << j << endl;
 	}
 
 	//counting total numbers of subsets of ()
@@ -55,7 +55,7 @@ int findStart(char arr[], int start, int len)
 
 	int sum = 0;
 
-	cout << "TBR " << arr << " start: " << start << " len: " << len << endl;
+	//cout << "TBR " << arr << " start: " << start << " len: " << len << endl;
 	for (int i = start; i < len; i++)
 	{
 		if (arr[i] == '(')
