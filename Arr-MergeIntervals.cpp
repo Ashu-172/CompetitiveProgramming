@@ -1,4 +1,4 @@
-/*////////////////////////////////////// Q 11: Babbar450 : Merge Intervals. //////////////////////////////////
+/*////////////////////////////////////// Q 14: Babbar450 : Merge Intervals. //////////////////////////////////
 Given a collection of intervals, merge all overlapping intervals.
 Example 1:
 Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
