@@ -26,6 +26,7 @@ Testcase 1: Given string ABC has permutations in 6 forms as ABC, ACB, BAC, BCA, 
 /////////////////////////////////////////////////////////////////////////////////////////////////*/
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
@@ -72,7 +73,10 @@ void printPermutations(string input, string prefix)
     {
         printPermutations(input.substr(1), prefix + input[0]);
         if (count > 0)
-            rotate(input);
+        { //library rotate function
+            rotate(input.begin(), input.begin() + 1, input.end());
+            //rotate(input);
+        }
     }
 }
 
@@ -107,6 +111,17 @@ void permutation(string input, int start, int size)
         swap(input[start], input[i]);
     }
 }
+/////////////////////// Solution 3 //////////////////////
+void printLexographically(string input)
+{
+    //sort the string to get smallest permutation
+    sort(input.begin(), input.end());
+    cout << input << " ";
+    //printing next permutations untill fun return false
+    //when there is no more lexographical next permutations possible
+    while (next_permutation(input.begin(), input.end()))
+        cout << input << " ";
+}
 
 int main()
 {
@@ -115,4 +130,6 @@ int main()
     printPermutations(input, "");
     cout << endl;
     permutation(input, 0, input.size());
+    cout << endl;
+    printLexographically(input);
 }
