@@ -8,6 +8,7 @@ Merge the two arrays into one sorted array in non-decreasing order without using
 
 using namespace std;
 
+/////////////////////////////// Solution 1 ///////////////////////////////////
 /*
 we can commpare each value of array 2 with all the values of array 1, and whenever we 
 encounter array2 value lessthan array1 value we can swap it, and continue comparing from 
@@ -29,6 +30,51 @@ void mergeArrays(int input1[], int input2[], int size1, int size2)
 }
 // time complexity for this solution is O(n^2) + O(n log n)
 
+////////////////////////////////// Solution 2 //////////////////////////////////////////////
+/*
+we can iterate over first array and compare each value with the first value present in the 
+second array, when we are also maintaining dmallest value of arr2 at oth index.
+algo:
+1.) iterate over array1, and for each element do following
+        compare ith value in array1 with first element of arr2
+        if arr1[i] is greater than arr[0], swap values
+        and re-arrange values in array2 to maintain smallest
+        value at 0th index.
+2.) to maintain smallest value at 0th index, we just need to move 
+    value present at 0th index to its correct place by moving other 
+    elements one step left.
+
+Time complexity for this solution is O(n*m)
+*/
+
+void reArrange(int input[], int size)
+{
+    int temp = input[0];
+    int i = 1;
+    while (input[i] < temp && i < size)
+    {
+        input[i - 1] = input[i];
+        i++;
+    }
+    input[i - 1] = temp;
+}
+
+void merge(int arr1[], int arr2[], int size1, int size2)
+{
+    int i = 0, j = 0;
+    while (i < size1)
+    {
+        if (arr1[i] > arr2[j])
+        {
+            swap(arr1[i], arr2[j]);
+
+            reArrange(arr2, size2);
+        }
+        i++;
+    }
+}
+
+///////////////////////////////// Solution 3 (Best) ///////////////////////////////////////
 /*
 since we have 2 sorted arrays, we have two scenarios 
 1.  all the elements in array1 are smaller than array two, 
