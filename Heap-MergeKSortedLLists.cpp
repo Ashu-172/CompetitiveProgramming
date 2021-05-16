@@ -96,7 +96,42 @@ public:
         return head;
     }
 
-    //////////////////////////////////////// Solution 2 (using merge method) ///////////////////////////////
+    //////////////////////////////////// Solution 2 (optimized use of minHeap) /////////////////////////
+    /*
+    1. Create a min-heap and insert the first element of all the ‘k’ linked lists.
+    2. As long as the min-heap is not empty, perform the following steps:
+        a. Remove the top element of the min-heap (which is the current minimum among all the elements in the min-heap) and add it to the result list.
+        b. If there exists an element (in the same linked list) next to the element popped out in previous step, insert it into the min-heap.
+    3. Return the head node address of the merged list.
+
+    Time Complexity: O(N * log k), where, ‘N’ is the total number of elements among all the linked lists and ‘k’ is the total number of lists.
+    Insertion and deletion in a min-heap requires log k time because here heap size is fixed to k so height will be log k. So the overall time complexity is O(N * log k).
+    */
+    Node *mergeKListsWithHeap2(Node *arr[], int k)
+    {
+        priority_queue<Node *, vector<Node *>, compare> minHeap;
+        for (int i = 0; i < k; i++)
+        {
+            minHeap.push(arr[i]);
+        }
+
+        Node *res = minHeap.top();
+        minHeap.pop();
+        Node *temp = res;
+
+        while (minHeap.size() != 0)
+        {
+            if (temp->next != NULL)
+                minHeap.push(temp->next);
+
+            temp->next = minHeap.top();
+            minHeap.pop();
+            temp = temp->next;
+        }
+        return res;
+    }
+
+    //////////////////////////////////////// Solution 3 (using merge method) ///////////////////////////////
     /*
     we can store head of the first linkedlist in a variable and we can iterate over the array and keep on merge the lists in the result list of the merge. for this we need to modify the standard merge function of the merge sort for using pointers instead of counters.
 
