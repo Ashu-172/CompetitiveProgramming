@@ -199,6 +199,33 @@ public:
         }
         return head;
     }
+
+    /////////////////////////////////// Solution 4 (optimized use of merge) ////////////////////////////////
+    /*
+    This is a divide and conquer approach. 
+    1. The idea is to pair up K lists and merge each pair in linear time using O(1) space.
+    2. After first cycle, K/2 lists are left each of size 2*N. After second cycle, K/4 lists are left each of size 4*N and so on.
+    3. Repeat the procedure until we have only one list left.
+
+    here every iteration of outer loop will process all elements of the array exactly once. which means each iteration will process n*k or N elements.
+    this outer loop will iterate log k times since after every iteration number of lists to merge will become half.
+    So the total time complexity will be O(N log k).
+    here space complexity will be O(1).
+    */
+    Node *mergeKLists(Node *arr[], int k)
+    {
+        int last = k - 1;
+        while (last != 0)
+        {
+            int j = last;
+            for (int i = 0; i < j; i++, j--)
+            {
+                arr[i] = merge(arr[i], arr[j]);
+            }
+            last = j;
+        }
+        return arr[0];
+    }
 };
 
 int main()
