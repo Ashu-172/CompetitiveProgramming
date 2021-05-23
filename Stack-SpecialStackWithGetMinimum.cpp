@@ -184,6 +184,75 @@ public:
     }
 };
 
+////////////////////////////////////////////////// Solution 3 ///////////////////////////////////////////////
+/*
+In the last solution since we are not using any extra space to store previous min values, we are using stack to do some calculations and find the previous min value whenever we are popping an element which is serving as current min. we stored the new element in the min variable instead of the stack and in the stack we inserted a value which was result of some calculation between previous min and the new element(new min) so that when we pop the current min we can use the stack value to calculate the previous min again and store it in min variable.
+
+we can implement any relationship between the previous min and new min and store in the stack, it is not necessary to use the equation which we used in previous solution.
+in this solution we are using different equation for tha same, here the value we'll store in the stack will be calculated as (num - min) (it'll always be a negative number)and then num we'll store in min variable since this we'll do only when we are inserting an element which is smaller than the current min.
+while popping we can check in the stack top in negative, it means the number we are popping is actually the number stores in the min variable, not in the stack. the value from the stack we'll pop and store in a variable top. uinng this value we'll calculate the previous min element and store that in min variable. new value of min will be min = min-top.
+*/
+class SpecialStack3
+{
+    stack<int> stk;
+    int size;
+    int minEle;
+
+public:
+    SpecialStack3(int n)
+    {
+        size = n;
+        minEle = -1;
+    }
+
+    void push(stack<int> &s, int a)
+    {
+        if (a > minEle)
+        {
+            s.push(a);
+            if (s.size() == 1)
+                minEle = a;
+        }
+        else
+        {
+            s.push(a - minEle);
+            minEle = a;
+        }
+    }
+
+    bool isFull(stack<int> &s, int n)
+    {
+        return s.size() == n;
+    }
+
+    bool isEmpty(stack<int> &s)
+    {
+        return s.empty();
+    }
+
+    int pop(stack<int> &s)
+    {
+        int res;
+        if (s.top() > 0)
+            res = s.top();
+        else
+        {
+            int top = s.top();
+            res = minEle;
+            minEle = res - top;
+        }
+        s.pop();
+        if (s.empty())
+            minEle = -1;
+        return res;
+    }
+
+    int getMin(stack<int> &s)
+    {
+        return minEle;
+    }
+};
+
 int main()
 {
     int n;
