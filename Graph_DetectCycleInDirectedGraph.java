@@ -6,6 +6,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Graph_DetectCycleInDirectedGraph {
     public static void main(String[] args) throws IOException {
@@ -24,7 +26,8 @@ public class Graph_DetectCycleInDirectedGraph {
             adj.get(u).add(v);
 
         }
-        boolean ans = isCycle(V, adj);
+        // boolean ans = isCycle(V, adj);
+        boolean ans = kahnTopoSort(V, adj);
         if (ans)
             System.out.println("1");
         else
@@ -66,6 +69,7 @@ public class Graph_DetectCycleInDirectedGraph {
         for (int i = 0; i < v; i++) {
             if (visited[i] != true)
                 if (dfsCycle1(i, adj, visitStack, visited) == true)
+                    // if (dfsCycle2(i, adj, visitStack, visited) == true)
                     return true;
         }
         return false;
@@ -84,8 +88,7 @@ public class Graph_DetectCycleInDirectedGraph {
         visited[node] = true;
 
         for (int n : adj.get(node)) {
-            // if (dfsCycle1(n, adj, visitStack, visited) == true)
-            if (dfsCycle2(n, adj, visitStack, visited) == true)
+            if (dfsCycle1(n, adj, visitStack, visited) == true)
                 return true;
         }
         visitStack[node] = false;
@@ -93,19 +96,58 @@ public class Graph_DetectCycleInDirectedGraph {
     }
 
     ////////////////////////////////// Approach 2 ////////////////////////////////
-    private static boolean dfsCycle2(int node, ArrayList<ArrayList<Integer>> adj, boolean visitStack[],
-            boolean visited[]) {
-        visitStack[node] = true;
-        visited[node] = true;
+    // private static boolean dfsCycle2(int node, ArrayList<ArrayList<Integer>> adj,
+    ////////////////////////////////// boolean visitStack[],
+    // boolean visited[]) {
+    // visitStack[node] = true;
+    // visited[node] = true;
 
-        for (int n : adj.get(node)) {
-            if (visited[n] != true) { // if not visited
-                if (dfsCycle2(n, adj, visitStack, visited) == true)
-                    return true;
-            } else if (visitStack[n] == true) // if visited in the same recursion stack
-                return true;
+    // for (int n : adj.get(node)) {
+    // if (visited[n] != true) { // if not visited
+    // if (dfsCycle2(n, adj, visitStack, visited) == true)
+    // return true;
+    // } else if (visitStack[n] == true) // if visited in the same recursion stack
+    // return true;
+    // }
+    // visitStack[node] = false;
+    // return false;
+    // }
+
+    /////////////////////////////// Approach 3 (kahn's algo) ////////////////////
+    /*
+     * The topological sort can be done only in a DAG, which don't have cycles. if a
+     * graph has cycles then while performing topo sort, there will be stage when
+     * there will be some unvisited nodes for which indegree will not be 0, since
+     * cycle is there. in this case total visited nodes will be less than n. if we
+     * track the total visited nodes count, then in the end if it is not equal to n,
+     * then we can say that there is a cycle present in the graph.
+     */
+    private static boolean kahnTopoSort(int n, ArrayList<ArrayList<Integer>> adj) {
+        int indegree[] = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            for (int node : adj.get(i))
+                indegree[node]++;
         }
-        visitStack[node] = false;
+
+        Queue<Integer> q = new LinkedList<Integer>();
+        for (int i = 0; i < n; i++)
+            if (indegree[i] == 0)
+                q.add(i);
+
+        int count = 0;
+        while (q.isEmpty() != true) {
+            int node = q.remove();
+            count++;
+            for (int num : adj.get(node)) {
+                indegree[num]--;
+                if (indegree[num] == 0)
+                    q.add(num);
+            }
+        }
+        if (count != n)// cycle detected
+            return true;
+
         return false;
     }
 }
