@@ -5,6 +5,468 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch BST_CheckBST",
+            "request": "launch",
+            "mainClass": "BST_CheckBST",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch BST_SuccessorAndPredecessor",
+            "request": "launch",
+            "mainClass": "BST_SuccessorAndPredecessor",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch BST_DeleteKeyFromTree",
+            "request": "launch",
+            "mainClass": "BST_DeleteKeyFromTree",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch BTree_DiagonalTraversal",
+            "request": "launch",
+            "mainClass": "BTree_DiagonalTraversal",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch BTree_CheckBalancedTree",
+            "request": "launch",
+            "mainClass": "BTree_CheckBalancedTree",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch BTree_ZigZagTraversal",
+            "request": "launch",
+            "mainClass": "BTree_ZigZagTraversal",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch BTree_VerticalTraversal",
+            "request": "launch",
+            "mainClass": "BTree_VerticalTraversal",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch BTree_BottomView",
+            "request": "launch",
+            "mainClass": "BTree_BottomView",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch BTree_TopView",
+            "request": "launch",
+            "mainClass": "BTree_TopView",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch BTree_LeftViewRightView",
+            "request": "launch",
+            "mainClass": "BTree_LeftViewRightView",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch BTree_LeftView",
+            "request": "launch",
+            "mainClass": "BTree_LeftView",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch BTree_MirrorTree",
+            "request": "launch",
+            "mainClass": "BTree_MirrorTree",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch BTree_DiameterOfTree",
+            "request": "launch",
+            "mainClass": "BTree_DiameterOfTree",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Heap_ReorganizeString",
+            "request": "launch",
+            "mainClass": "Heap_ReorganizeString",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch KthLargestSumOfContigiousSubArray",
+            "request": "launch",
+            "mainClass": "KthLargestSumOfContigiousSubArray",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Heap_MergeTwoMaxHeaps",
+            "request": "launch",
+            "mainClass": "Heap_MergeTwoMaxHeaps",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Heap_MergeKSortedArrays",
+            "request": "launch",
+            "mainClass": "Heap_MergeKSortedArrays",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Heap_K_LargestElements",
+            "request": "launch",
+            "mainClass": "Heap_K_LargestElements",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Heap_MaxOfAll_Ksize_SubArray",
+            "request": "launch",
+            "mainClass": "Heap_MaxOfAll_Ksize_SubArray",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Heap_HeapSort",
+            "request": "launch",
+            "mainClass": "Heap_HeapSort",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch LList_Detect_Remove_Loop",
+            "request": "launch",
+            "mainClass": "LList_Detect_Remove_Loop",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch LList_DetectLoop",
+            "request": "launch",
+            "mainClass": "LList_DetectLoop",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Stack_OperationOnMiddleNode",
+            "request": "launch",
+            "mainClass": "Stack_OperationOnMiddleNode",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch S_S_SearchInRotatedArray",
+            "request": "launch",
+            "mainClass": "S_S_SearchInRotatedArray",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch String_FindDuplicates",
+            "request": "launch",
+            "mainClass": "String_FindDuplicates",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Arr_MoveNegativesAside",
+            "request": "launch",
+            "mainClass": "Arr_MoveNegativesAside",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graph_CreateGraph_Bfs_Dfs",
+            "request": "launch",
+            "mainClass": "Graph_CreateGraph_Bfs_Dfs",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch BST_FindKeyInBST",
+            "request": "launch",
+            "mainClass": "BST_FindKeyInBST",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch BTree_BoundaryTraversal",
+            "request": "launch",
+            "mainClass": "BTree_BoundaryTraversal",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Heap_ArrayToHeap",
+            "request": "launch",
+            "mainClass": "Heap_ArrayToHeap",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Heap_ArrayImplementation",
+            "request": "launch",
+            "mainClass": "Heap_ArrayImplementation",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch LList_ReverseInGroups",
+            "request": "launch",
+            "mainClass": "LList_ReverseInGroups",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch S_S_FirstAndLastPositionOfX",
+            "request": "launch",
+            "mainClass": "S_S_FirstAndLastPositionOfX",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch BTree_HeightOfTree",
+            "request": "launch",
+            "mainClass": "BTree_HeightOfTree",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch DP_Backtrack_LongestIncreasingPath",
+            "request": "launch",
+            "mainClass": "DP_Backtrack_LongestIncreasingPath",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch DP_BackTracking_LongestIncreasingPath",
+            "request": "launch",
+            "mainClass": "DP_BackTracking_LongestIncreasingPath",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch BackTracking_LongestIncreasingPath",
+            "request": "launch",
+            "mainClass": "BackTracking_LongestIncreasingPath",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Swiggy_FoodPacketsMinCost",
+            "request": "launch",
+            "mainClass": "Swiggy_FoodPacketsMinCost",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch String_CheckPalindrome",
+            "request": "launch",
+            "mainClass": "String_CheckPalindrome",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Arr_Sort012",
+            "request": "launch",
+            "mainClass": "Arr_Sort012",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch BTree_Traversals",
+            "request": "launch",
+            "mainClass": "BTree_Traversals",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Arr_FindKthMinMax",
+            "request": "launch",
+            "mainClass": "Arr_FindKthMinMax",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch LList_ImplementationWithReverse",
+            "request": "launch",
+            "mainClass": "LList_ImplementationWithReverse",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Queue_Implementation",
+            "request": "launch",
+            "mainClass": "Queue_Implementation",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Stack_Implementation",
+            "request": "launch",
+            "mainClass": "Stack_Implementation",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Google_FooBarQ3",
+            "request": "launch",
+            "mainClass": "Google_FooBarQ3",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Google_FooBarQ2",
+            "request": "launch",
+            "mainClass": "Google_FooBarQ2",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graph_GraphColoringProblem",
+            "request": "launch",
+            "mainClass": "Graph_GraphColoringProblem",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graph_TravellingSalesmanProblem",
+            "request": "launch",
+            "mainClass": "Graph_TravellingSalesmanProblem",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graph_TotalNumberOfMST",
+            "request": "launch",
+            "mainClass": "Graph_TotalNumberOfMST",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graph_PrimsAlgo_MinimumSpanningTree",
+            "request": "launch",
+            "mainClass": "Graph_PrimsAlgo_MinimumSpanningTree",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graph_KruskalAlgoMinimumSpanningTree",
+            "request": "launch",
+            "mainClass": "Graph_KruskalAlgoMinimumSpanningTree",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graph_DisjointSet_CycleDetectionUndirectedGraph",
+            "request": "launch",
+            "mainClass": "Graph_DisjointSet_CycleDetectionUndirectedGraph",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graph_ShortestPathInDAG_TopoSort",
+            "request": "launch",
+            "mainClass": "Graph_ShortestPathInDAG_TopoSort",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graph_FinishAllTasks",
+            "request": "launch",
+            "mainClass": "Graph_FinishAllTasks",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graph_MinimumTimeByJob",
+            "request": "launch",
+            "mainClass": "Graph_MinimumTimeByJob",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graph_DijkstrasAlgo",
+            "request": "launch",
+            "mainClass": "Graph_DijkstrasAlgo",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graph_TopologicalSort",
+            "request": "launch",
+            "mainClass": "Graph_TopologicalSort",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graph_ShortestDistanceForAllNode_UnitWeight",
+            "request": "launch",
+            "mainClass": "Graph_ShortestDistanceForAllNode_UnitWeight",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graph_MakeNetworkConnected",
+            "request": "launch",
+            "mainClass": "Graph_MakeNetworkConnected",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graph_StepsByKnight",
+            "request": "launch",
+            "mainClass": "Graph_StepsByKnight",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Google_FooBarQ1",
+            "request": "launch",
+            "mainClass": "Google_FooBarQ1",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graph_BipartiteGraph",
+            "request": "launch",
+            "mainClass": "Graph_BipartiteGraph",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graph_DetectCycleInDirectedGraph",
+            "request": "launch",
+            "mainClass": "Graph_DetectCycleInDirectedGraph",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graph_DetectCycleUisngBfsDfs",
+            "request": "launch",
+            "mainClass": "Graph_DetectCycleUisngBfsDfs",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Graph_CreateGraphAndPrint",
+            "request": "launch",
+            "mainClass": "Graph_CreateGraphAndPrint",
+            "projectName": "competitive programming_5c3926d9"
+        },
+        {
             "name": "g++.exe - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
